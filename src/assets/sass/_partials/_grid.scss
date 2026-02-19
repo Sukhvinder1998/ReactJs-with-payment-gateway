@@ -1,0 +1,79 @@
+// Create a container and row mixin for convenience
+@mixin jn-holder {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+    @media (min-width: 1400px) {
+        max-width: 1320px;
+    }
+}
+// Example usage
+.jn-holder {
+    @include jn-holder;
+}
+
+@mixin jn-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.jn-row {
+    @include jn-row;
+}
+
+.jn-row > * {
+    width: 100%;
+    padding-left: 15px;
+    padding-left: 15px;
+}
+
+// Define the breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// Mixin to generate the column classes for a given breakpoint
+@mixin make-col($size, $columns: 12) {
+    @for $i from 1 through $columns {
+        .cell-#{$size}-#{$i} {
+            width: calc(100% / $columns) * $i;
+        }
+    }
+}
+
+// Generate column classes for all breakpoints
+@mixin generate-grid($breakpoints) {
+    @each $breakpoint, $breakpoint-width in $breakpoints {
+        @if $breakpoint == xs {
+            @include make-col(xs);
+        } @else {
+            @media (min-width: $breakpoint-width) {
+                @include make-col($breakpoint);
+            }
+        }
+    }
+}
+
+// Call the mixin to generate the grid
+@include generate-grid($grid-breakpoints);

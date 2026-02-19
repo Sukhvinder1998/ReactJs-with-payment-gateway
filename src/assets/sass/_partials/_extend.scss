@@ -1,0 +1,265 @@
+%pt_120 {
+    padding-top: 60px;
+    @media only screen and (min-width: 576px) {
+        padding-top: 80px;
+    }
+}
+// padding:-
+%pt_100 {
+    @include jn-standalone((
+        padding-top: (30px, 40px, 50px, 60px, 80px, 100px),
+    ), min);
+}
+%pb_100 {
+    @include jn-standalone((
+        padding-bottom: (30px, 40px, 50px, 60px, 80px, 100px),
+    ), min);
+}
+
+// margins:-
+%mt_20 {
+  @include jn-standalone(
+    (
+      margin-top: (
+        10px,
+        null,
+        null,
+        15px,
+        null,
+        20px,
+      ),
+    ),
+    min
+  );
+}
+
+%mb_20 {
+    @include jn-standalone((
+        margin-bottom: (15px, null, null, 16px, 18px, 20px),
+    ), min);
+}
+%mt_30 {
+  @include jn-standalone(
+    (
+      margin-top: (
+        20px,
+        null,
+        null,
+        30px,
+        null,
+        30px,
+      ),
+    ),
+    min
+  );
+}
+%mb_30 {
+    @include jn-standalone((
+        margin-bottom: (20px, 22px, 24px, 26px, 28px, 30px),
+    ), min);
+}
+%mb_50 {
+    @include jn-standalone((
+        margin-bottom: (20px, 30px, 35px, 40px, 45px, 50px),
+    ), min);
+}
+%mb_100 {
+    @include jn-standalone((
+        margin-bottom: (30px, 40px, 50px, 60px, 80px, 100px),
+    ), min);
+}
+%mt_40 {
+  @include jn-standalone(
+    (
+      margin-top: (
+        20px,
+        null,
+        null,
+        30px,
+        null,
+        40px,
+      ),
+    ),
+    min
+  );
+}
+
+%mb_40 {
+  @include jn-standalone(
+    (
+      margin-bottom: (
+        15px,
+        20px,
+        null,
+        30px,
+        null,
+        40px,
+      ),
+    ),
+    min
+  );
+}
+%mt_60 {
+  @include jn-standalone(
+    (
+      margin-top: (
+        30px,
+        null,
+        null,
+        40px,
+        null,
+        60px,
+      ),
+    ),
+    min
+  );
+}
+
+%mb_60 {
+  @include jn-standalone(
+    (
+      margin-bottom: (
+        30px,
+        null,
+        null,
+        40px,
+        null,
+        60px,
+      ),
+    ),
+    min
+  );
+}
+
+// font:-
+%fs_18 {
+    @include jn-standalone(
+      (
+        font-size: (
+          16px,
+          null,
+          null,
+          null,
+          null,
+          18px,
+        ),
+      ),
+      min
+    );
+  }
+  %fs_20 {
+    @include jn-standalone(
+      (
+        font-size: (
+          16px,
+          18px,
+          null,
+          null,
+          null,
+          20px,
+        ),
+      ),
+      min
+    );
+  }
+%fs_22 {
+    @include jn-standalone(
+      (
+        font-size: (
+          18px,
+          20px,
+          null,
+          null,
+          null,
+          22px,
+        ),
+      ),
+      min
+    );
+  }
+    %fs_26 {
+      @include jn-standalone((font-size: (18px,
+            20px,
+            null,
+            22px,
+            26px,
+            null,
+          ),
+        ),
+        min);
+    }
+  %fs_28 {
+    @include jn-standalone(
+      (
+        font-size: (
+          16px,
+          18px,
+          null,
+          20px,
+          24px,
+          28px,
+        ),
+      ),
+      min
+    );
+  }
+  %fs_32 {
+    @include jn-standalone(
+      (
+        font-size: (
+          18px,
+          20px,
+          null,
+          24px,
+          28px,
+          32px,
+        ),
+      ),
+      min
+    );
+  }
+  %fs_44 {
+    @include jn-standalone(
+      (
+        font-size: (
+          22px,
+          26px,
+          32px,
+          null,
+          38px,
+          44px,
+        ),
+      ),
+      min
+    );
+  }
+  %fs_55 {
+    @include jn-standalone(
+      (
+        font-size: (
+          24px,
+          26px,
+          30px,
+          35px,
+          45px,
+          55px,
+        ),
+      ),
+      min
+    );
+  }
+  %fs_58 {
+    @include jn-standalone(
+      (
+        font-size: (
+          24px,
+          28px,
+          30px,
+          38px,
+          48px,
+          58px,
+        ),
+      ),
+      min
+    );
+  }
